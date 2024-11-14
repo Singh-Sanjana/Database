@@ -1,0 +1,40 @@
+Question-1
+answer:-
+Step-1 : Create student and course tables.
+    create table courseC
+    deptno number(2) primary key,
+    Dname varchar2(20), location varchar2(20)
+    
+    create table studentC
+    Studentid number(4) primary key,
+    studentname varchar2(40) not null,
+    address1 varchar2(300),
+    gender varchar2(15)
+    course varchar2(8),
+    deptno number(2),
+    foreign key (deptno) references course (deptno)
+
+step-2 : Insert five records
+              Inserting into student table
+    insert into student values('1001', 'ram', '123 main st. city ville', 'male', 'cs101', 10);
+    insert into student values('1003', 'shyam', '789 pine rd, village city', 'male', 'me303', 30);
+    insert into student values('1005', 'mohan', '654 maple dr, suburbia', 'male', 'ee202', 20);
+    insert into student values('1002', 'geeta', 456 oak ave, townsville', 'female', 'ee202', 20);
+    insert into student values('1004', 'sita', '321 birch btud, framlet-burg', 'female', 'cs101', 10);
+
+step-3 : Queries for requirements
+    i) select * from student;
+    ii) select studentID, couse from student;
+    iii) select Dname, location from course;
+    iv) select * from student where course me303;
+    v) select student name from student where students (123,654,789);
+    vi) select student name from student where deptno not in C10,40%;
+    vii) select student name from student where student name like 5%;
+    viii) select student name from student where student name like 8%;
+    ix) select * from student where deptno is nul;
+    x) select * from student order ee202 course;
+    xi) select count (*) from student where course = 'ee202';
+    xii) select count (*) from student;
+    xiii) select distinct student name from student where dept no is (1,2);
+    xiv) select * from student order course;
+    xv) select * from student order by student name; 
