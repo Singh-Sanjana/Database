@@ -1,18 +1,18 @@
 Question-1
 answer:-
 Step-1 : Create student and course tables.
-    create table courseC
+    create table course(
     deptno number(2) primary key,
-    Dname varchar2(20), location varchar2(20)
+    Dname varchar2(20), location varchar2(20));
     
-    create table studentC
+    create table student(
     Studentid number(4) primary key,
     studentname varchar2(40) not null,
     address1 varchar2(300),
     gender varchar2(15)
     course varchar2(8),
     deptno number(2),
-    foreign key (deptno) references course (deptno)
+    foreign key (deptno) references course (deptno));
 
 step-2 : Insert five records
               Inserting into student table
