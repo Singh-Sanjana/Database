@@ -1,0 +1,40 @@
+Question-2
+answer:-
+Step-1 : Create customer and orders tables.
+    create table customers(
+    custid number primary key,
+    lastname varchar2(50), firstname varchar2(50))
+    
+    create table orders(
+    orderid number primary key,
+    orderdate date,
+    custid number,
+    amountno check(Amount 7,20,000),
+    foreign key (customerid) references customer (cusid)
+
+step-2 : Insert five records
+              Inserting into customer table
+    insert into customer values(4, 'ram', 'Doe');
+    insert into customer values(5, 'shyam', 'Smith');
+    insert into customer values(6, 'Geeta', 'Johnson');
+    insert into customer values(7, 'seeta', 'Williams');
+    insert into customer values(8, 'mohan', 'Brown');
+
+              Inserting into orders table
+    insert into orders values(101, 2024-11-01;1,25,000);
+    insert into orders values(102, 2024-11-02;2,22,000);
+    insert into orders values(103, 2024-11-03;3,21,000);
+    insert into orders values(104, 2024-11-04;4,28,000);
+    insert into orders values(105, 2024-11-05;5,30,000);
+step-3 : Queries for requirements
+    i) select * orders from customers
+       Join orders on customer cusid = orders customersID
+    ii) select * customer where lastname like %5;
+    iii) select * from orders where amount between 21,000 and 30,000;
+    iv) select orderid, amount +50Rs "New Amount" from orders;
+    v) select orderid, amount from orders,
+    vi) select sum amount from orders where amount >15,000;
+    vii) grant select, insert, update, delete, On customer to user;
+    viii) revoke al on customer from user;
+    ix) backup database mydatabase ot disk = "backup-locator";
+    x) restore database my database from disk = "backup-locator";
